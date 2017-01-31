@@ -8,7 +8,12 @@ export class ClickedDirective {
     this.backgroundColor = 'green';
   };
 
-  @HostListener('mouseleave') mouseover() {
+  @HostListener('click', ['$event']) onClick() {
+    this.backgroundColor = 'blue';
+    console.log("Event Target" + event.target);
+  };
+
+  @HostListener('mouseleave') mouseleave() {
     this.backgroundColor = 'red';
   };
   @HostBinding('style.backgroundColor') get setColor() {

@@ -7,3 +7,9 @@
     </ul>
   </div>
 </div>
+<button (click)="onSwitch()">YALLAH</button>
+<div *ngIf="switch">TOTO</div>
+<hr />
+<ul>shopping-list
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>

@@ -9,6 +9,12 @@ import { ShoppingListAddComponent } from "./shopping-list-add.component"
 })
 export class ShoppingListComponent implements OnInit {
 
+  private switch = true;
+  private items = [1,2,3,4,5];
+  onSwitch() {
+    this.switch = !this.switch;
+  }
+
   constructor() { }
 
   ngOnInit() {
